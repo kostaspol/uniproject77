@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">One Financial Group</string>
+    <string name="user_screen">Username</string>
+    <string name="pass_screen">Password</string>
+    <string name="logo_des">logodes</string>
+    <string name="login_button">Login</string>
+    <string name="main_draw">Main Draw</string>
+    <string name="open">Open</string>
+    <string name="accounts">Accounts</string>
+    <string name="investor">Investor</string>
+    <string name="email">Email</string>
+    <string name="mortgages">Mortgages</string>
+    <string name="insurance">Insurance</string>
+    <string name="savings">Savings</string>
+    <string name="callus">Call</string>
+    <string name="close">Close</string>
+    <string name="des_user">desuser</string>
+    <string name="user_inside">Konstantinos Polychroniadis</string>
+    <string name="des_gen">desgen</string>
+    <string name="default_title">Default itle</string>
+    <string name="default_description">Default Description</string>
+    <string name="communication">Contact Us</string>
+    <string name="default_amount">Default Amount</string>
+    <string name="default_holder">Default Holder</string>
+    <string name="default_help">Default Help</string>
+    <string name="add">Add</string>
+    <string name="view_data">View Data</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="insert_here">Insert Here</string>
+    <string name="insert_message">Please Insert your Amount Below</string>
+    <string name="edit_message">Please Edit the Amount Below</string>
+    <string name="list_message">Your Savings Listed Below</string>
+    <string name="select_message">Please Tap on an Account Below</string>
+    <string name="invest_progress">See below Investment Progress</string>
+    <string name="invest_map">Stock Exchanges</string>
+    <string name="google_maps_api_key">AIzaSyDPZfgBGnT_rOWoV1deQNVfYa5Yutd3kUs</string>
+    <string name="map">Map</string>
+    <string name="mortgage_message">Your Property List</string>
+    <string name="find">FIND</string>
+    <string name="label_name"> </string>
+    <string name="label_property">Click below to see you properties in Google Maps </string>
+    <string name="logout">Logout</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2"> </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">support@onefinancialgroup.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_investor">Investor</string>
+
+        <string-array name="array_properties">
+            <item>Select a property from the list</item>
+            <item>Brussels - Property 762992-A</item>
+            <item>Brussels - Property 451290-F</item>
+            <item>London - Property 321098-A</item>
+            <item>London - Property 320967-S</item>
+            <item>London - Property 320986-G</item>
+            <item>Paris - Property 328987-W</item>
+            <item>Paris - Property 219976-A</item>
+        </string-array>
+</resources>

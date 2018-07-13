@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:paddingTop="?attr/actionBarSize"
+        tools:context=".MainActivity2">
+
+        <TextView
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:hint="@string/select_message"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <fragment
+            android:id="@+id/list_frag"
+            android:name="com.example.konstantinospolychroniadis.onefinancialgroup.WorkoutListFragment"
+            class="com.example.konstantinospolychroniadis.onefinancialgroup.WorkoutListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            tools:layout="@android:layout/simple_list_item_1" />
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:name="com.example.konstantinospolychroniadis.onefinancialgroup.WorkoutDetailFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main2"
+        app:menu="@menu/activity_main2_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
