@@ -15,7 +15,7 @@ public class WorkoutListFragment extends ListFragment {
         // Required empty public constructor
     }
 
-    interface WorkoutListListener{
+    interface WorkoutListListener {
         void itemClicked(long id);
     }
 
@@ -36,13 +36,14 @@ public class WorkoutListFragment extends ListFragment {
 
     @SuppressWarnings("deprecation")
     @Override
-    public void onAttach(Activity activity){
+    public void onAttach(Activity activity) {
         super.onAttach(activity);
-        this.listener = (WorkoutListListener)activity;
+        this.listener = (WorkoutListListener) activity;
     }
+
     @Override
-    public void onListItemClick(ListView l, View v, int position, long id){
-        if(listener != null){
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        if (listener != null) {
             listener.itemClicked(id);
         }
     }

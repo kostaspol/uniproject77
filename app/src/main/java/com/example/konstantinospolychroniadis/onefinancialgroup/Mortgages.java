@@ -21,7 +21,6 @@ public class Mortgages extends AppCompatActivity {
 
     private static final String TAG = "Mortgages";
     private static final int ERROR_DIALOG_REQUEST = 9001;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +33,8 @@ public class Mortgages extends AppCompatActivity {
             init();
         }
     }
-
+    //spinner
     private PropertyInfo info = new PropertyInfo();
-
     public void onClickFindProperty(View view){
         TextView description  = (TextView) findViewById(R.id.textView);
         Spinner courseName = (Spinner) findViewById(R.id.spinner);
@@ -49,7 +47,6 @@ public class Mortgages extends AppCompatActivity {
         }
         description.setText(typesFormatted);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -58,7 +55,7 @@ public class Mortgages extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
+    //button for accessing the map
     private void init() {
         Button btnMap = (Button) findViewById(R.id.btnMap);
         btnMap.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +66,7 @@ public class Mortgages extends AppCompatActivity {
             }
         });
     }
-
+    //checking if google services are working for log
     public boolean isServicesOK() {
         Log.d(TAG, "isServicesOK: checking google services version");
         int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(Mortgages.this);

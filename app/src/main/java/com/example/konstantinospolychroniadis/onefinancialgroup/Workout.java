@@ -7,7 +7,7 @@ public class Workout {
     private String amount;
     private String holder;
     private String help;
-
+    //setting fragments info
     public static final Workout[] workouts={
             new Workout("Primary Account", "Account Number: 20-45-34 567239875", "Current Balance: £ 4,267.97", "Main Holder: KSI Ltd", "Representative: Joana Smith"),
             new Workout("Savings Account", "Account Number: 23-45-22 561923450", "Current Balance: £ 9,845.42", "Main Holder: KSI Ltd", "Representative: Keila Willis"),
@@ -21,7 +21,7 @@ public class Workout {
         this.holder = holder;
         this.help = help;
     }
-
+    //returning values to fragment
     public String getName() {
         return name;
     }

@@ -19,7 +19,6 @@ public class DbHandler extends SQLiteOpenHelper {
     private static final String User_id="id";
     private static final String User_name="name";
     private static final String User_password="password";
-
     //constructor here
     public DbHandler(Context context) {
         super(context,Db_Name,null,Db_Version);

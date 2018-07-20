@@ -10,19 +10,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-@SuppressWarnings("FieldCanBeLocal")
 public class EditDataActivity extends AppCompatActivity {
 
     private static final String TAG = "EditDataActivity";
-
     private Button btnSave,btnDelete;
     private EditText editable_item;
-
     DatabaseHelper mDatabaseHelper;
-
     private String selectedName;
     private int selectedID;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,22 +26,16 @@ public class EditDataActivity extends AppCompatActivity {
         btnDelete = (Button) findViewById(R.id.btnDelete);
         editable_item = (EditText) findViewById(R.id.editable_item);
         mDatabaseHelper = new DatabaseHelper(this);
-
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         //get the intent extra from the ListDataActivity
         Intent receivedIntent = getIntent();
-
         //now get the itemID we passed as an extra
         selectedID = receivedIntent.getIntExtra("id",-1); //NOTE: -1 is just the default value
-
         //now get the name we passed as an extra
         selectedName = receivedIntent.getStringExtra("name");
-
         //set the text to show the current selected name
         editable_item.setText(selectedName);
-
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,11 +43,9 @@ public class EditDataActivity extends AppCompatActivity {
                 if(!item.equals("")){
                     mDatabaseHelper.updateName(item,selectedID,selectedName);
                 }else{
-                    toastMessage("You must enter a name");
-                }
+                    toastMessage("You must enter a name"); }
             }
         });
-
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,21 +55,16 @@ public class EditDataActivity extends AppCompatActivity {
             }
         });
     }
-
     /**
      * customizable toast
      * @param message
      */
     private void toastMessage(String message){
-        Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
-    }
-
+        Toast.makeText(this,message, Toast.LENGTH_SHORT).show(); }
     @Override
     public boolean onOptionsItemSelected (MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home){
-            this.finish();
-        }
-        return super.onOptionsItemSelected(item);
-    }
+            this.finish(); }
+        return super.onOptionsItemSelected(item); }
 }

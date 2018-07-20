@@ -37,6 +37,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         return super.onOptionsItemSelected(item);
     }
 
+    //setting markers on maps
     @Override
     public void onMapReady(GoogleMap googleMap) {
         LatLng paris = new LatLng(48.864716, 2.349014);

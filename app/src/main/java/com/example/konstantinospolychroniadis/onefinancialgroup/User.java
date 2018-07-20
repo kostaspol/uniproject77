@@ -1,23 +1,22 @@
 package com.example.konstantinospolychroniadis.onefinancialgroup;
 
 public class User {
-
     //variables
     int id;
     String name;
     String password;
-
     // Constructor with two parameters name and password
-    public User(String name,String password) {
+    public User (String name,String password) {
         this.name=name;
         this.password=password;
     }
     //Parameter constructor containing all three parameters
-    public User(int id,String name,String psd) {
+    public User (int id,String name,String psd) {
         this.id=id;
         this.name=name;
         this.password=psd;
     }
+    //returning values
     public int getId() {
         return id;
     }

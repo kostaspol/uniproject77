@@ -19,17 +19,17 @@ public class WorkoutDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        if(savedInstanceState != null){
+        if (savedInstanceState != null) {
             workoutId = savedInstanceState.getLong("workoutId");
         }
         return inflater.inflate(R.layout.fragment_workout_detail, container, false);
     }
 
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         View view = getView();
-        if(view != null){
+        if (view != null) {
             TextView title = (TextView) view.findViewById(R.id.textTitle);
             Workout workout = Workout.workouts[(int) workoutId];
             title.setText(workout.getName());
@@ -44,12 +44,12 @@ public class WorkoutDetailFragment extends Fragment {
         }
     }
 
-    public void setWorkout(long id){
+    public void setWorkout(long id) {
         this.workoutId = id;
     }
 
     @Override
-    public void onSaveInstanceState(Bundle savedInstateState){
+    public void onSaveInstanceState(Bundle savedInstateState) {
         savedInstateState.putLong("workoutId", workoutId);
     }
 }

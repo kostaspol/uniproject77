@@ -9,28 +9,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-@SuppressWarnings("FieldCanBeLocal")
 public class Savings extends AppCompatActivity {
 
     private static final String TAG = "Savings";
-
     DatabaseHelper mDatabaseHelper;
     private Button btnAdd, btnViewData;
     private EditText editText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_savings);
-
         editText = (EditText) findViewById(R.id.editText);
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnViewData = (Button) findViewById(R.id.btnView);
         mDatabaseHelper = new DatabaseHelper(this);
-
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        //view all the entries on the database
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +38,7 @@ public class Savings extends AppCompatActivity {
                 }
             }
         });
-
+        //moving to view data
         btnViewData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +47,6 @@ public class Savings extends AppCompatActivity {
             }
         });
     }
-
     @Override
     public boolean onOptionsItemSelected (MenuItem item) {
         int id = item.getItemId();
@@ -61,7 +55,7 @@ public class Savings extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
+    //adding data on database
     public void AddData(String newEntry) {
         boolean insertData = mDatabaseHelper.addData(newEntry);
         if (insertData) {
@@ -70,7 +64,6 @@ public class Savings extends AppCompatActivity {
             toastMessage("Something went wrong");
         }
     }
-
     /**
      * customizable toast
      * @param message

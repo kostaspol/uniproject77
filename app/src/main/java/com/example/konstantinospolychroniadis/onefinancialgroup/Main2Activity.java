@@ -32,7 +32,6 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -42,36 +41,29 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             super.onBackPressed();
         }
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        //inflate the menu; this adds items to the action bar if it is present
         getMenuInflater().inflate(R.menu.main2, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        // handle action bar item clicks here, the action bar will
+        // automatically handle clicks on the home/up button
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
+        //noinspection simplifiableIfStatement
         if (id == R.id.action_settings) {
             Toast.makeText(Main2Activity.this, "Access Denied", Toast.LENGTH_LONG).show();
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        // handle navigation view item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.nav_accounts) {
             startActivity( new Intent(Main2Activity.this, Main2Activity.class));
 
@@ -88,7 +80,6 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             Intent intent = new Intent(Intent.ACTION_DIAL);
             intent.setData(Uri.parse("tel:0123456789"));
             startActivity(intent);
-
         } else if (id == R.id.nav_email) {
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("plain/text");
@@ -102,12 +93,11 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             startActivity(loginscreen);
             this.finish();
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
+    //getting fragment
     @Override
     public void itemClicked(long id) {
         WorkoutDetailFragment details = new WorkoutDetailFragment();

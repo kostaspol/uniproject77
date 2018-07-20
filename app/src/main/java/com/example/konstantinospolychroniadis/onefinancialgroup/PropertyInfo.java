@@ -5,6 +5,7 @@ import java.util.List;
 
 public class PropertyInfo {
 
+    //setting property info for spinner
     List<String> getProperties(String type) {
         List<String> properties = new ArrayList<String>();
         if (type.equals("Select a property from the list")) {
