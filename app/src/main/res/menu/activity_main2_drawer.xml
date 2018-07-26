@@ -21,7 +21,6 @@
             android:icon="@drawable/ic_menu_savings"
             android:title="@string/savings" />
     </group>
-
     <item android:title="@string/communication">
         <menu>
             <item
@@ -40,5 +39,4 @@
                 android:title="@string/logout" />
         </menu>
     </item>
-
 </menu>

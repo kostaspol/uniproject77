@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".WorkoutDetailFragment"
     android:orientation="vertical">
-
     <TextView
         android:id="@+id/textTitle"
         android:layout_width="380dp"
@@ -14,7 +13,6 @@
         android:text="@string/default_title"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <TextView
         android:id="@+id/textHolder"
         android:layout_width="380dp"
@@ -22,7 +20,6 @@
         android:layout_gravity="center"
         android:paddingTop="50dp"
         android:text="@string/default_holder"/>
-
     <TextView
         android:id="@+id/textDescription"
         android:layout_width="380dp"
@@ -30,7 +27,6 @@
         android:layout_gravity="center"
         android:paddingTop="15dp"
         android:text="@string/default_description" />
-
     <TextView
         android:id="@+id/textAmount"
         android:layout_width="380dp"
@@ -38,7 +34,6 @@
         android:layout_gravity="center"
         android:paddingTop="15dp"
         android:text="@string/default_amount"/>
-
     <TextView
         android:id="@+id/textHelp"
         android:layout_width="380dp"
@@ -46,5 +41,4 @@
         android:layout_gravity="center"
         android:paddingTop="15dp"
         android:text="@string/default_help"/>
-
 </LinearLayout>

@@ -11,9 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    EditText uname, pswd;
-    Button login;
-    DbHandler db;
+    EditText uname, pswd; Button login; DbHandler db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,36 +25,23 @@ public class MainActivity extends AppCompatActivity {
                 String name = uname.getText().toString();
                 String password = pswd.getText().toString();
                 int id = checkUser(new User(name, password));
-                if (id == -1) {
-                    Toast.makeText(MainActivity.this, "Wrong Credentials", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    startActivity( new Intent(MainActivity.this, Main2Activity.class));
-                }
-            }
-        });
+                if (id == -1) { Toast.makeText(MainActivity.this, "Wrong Credentials", Toast.LENGTH_SHORT).show();
+                } else { Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    startActivity( new Intent(MainActivity.this, Main2Activity.class)); } } });
         db = new DbHandler(MainActivity.this);
         //inserting dummy users
         db.addUser(new User("admin", "admin"));
         db.addUser(new User("kostas", "1234"));
-        db.addUser(new User("user", "0000"));
-    }
-    public int checkUser(User user) {
-        return db.checkUser(user);
-    }
+        db.addUser(new User("user", "0000")); }
+    public int checkUser(User user) { return db.checkUser(user); }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present
-        getMenuInflater().inflate(R.menu.main2, menu);
-        return true;
-    }
+        getMenuInflater().inflate(R.menu.main2, menu); return true; }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
     // Handle action bar item clicks here. The action bar will
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+        if (id == R.id.action_settings) { return true; }
+        return super.onOptionsItemSelected(item); }
 }

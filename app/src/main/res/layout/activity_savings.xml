@@ -8,12 +8,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.konstantinospolychroniadis.onefinancialgroup.Savings">
-
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
         <TextView
             android:id="@+id/editText2"
             android:layout_width="match_parent"
@@ -24,7 +22,6 @@
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold" />
-
         <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
@@ -35,13 +32,11 @@
             android:textAlignment="center"
             android:textColorHighlight="@color/colorPrimaryDark" />
     </RelativeLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/relativeLayout1"
         android:layout_marginTop="30dp">
-
         <Button
             android:id="@+id/btnAdd"
             style="?android:attr/borderlessButtonStyle"
@@ -49,7 +44,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
             android:text="@string/add" />
-
         <Button
             android:id="@+id/btnView"
             style="?android:attr/borderlessButtonStyle"
@@ -58,7 +52,5 @@
             android:layout_marginStart="20dp"
             android:layout_toEndOf="@+id/btnAdd"
             android:text="@string/view_data" />
-
     </RelativeLayout>
-
 </RelativeLayout>

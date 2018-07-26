@@ -14,7 +14,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Investor extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +46,7 @@ public class Investor extends AppCompatActivity {
                 new DataPoint(d2, 750),
                 new DataPoint(d3, 1000),
                 new DataPoint(d4, 1250),
-                new DataPoint(d5, 1500)
-        });
+                new DataPoint(d5, 1500) });
         graph.addSeries(series);
         // set date label formatter
         graph.getGridLabelRenderer().setLabelFormatter(new DateAsXAxisLabelFormatter(Investor.this));
@@ -62,8 +60,6 @@ public class Investor extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == android.R.id.home) {
-            this.finish();
-        }
+        if (id == android.R.id.home) { this.finish(); }
         return super.onOptionsItemSelected(item); }
 }

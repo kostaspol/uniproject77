@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PropertyInfo {
-
     //setting property info for spinner
     List<String> getProperties(String type) {
         List<String> properties = new ArrayList<String>();
@@ -45,9 +44,6 @@ public class PropertyInfo {
             properties.add("Property Address: 9 Central Avenue");
             properties.add("City: Paris");
             properties.add("Property Value: £ 14,900,00");
-        } else {
-            properties.add("Property not found");
-        }
-        return properties;
-    }
+        } else { properties.add("Property not found"); }
+        return properties; }
 }

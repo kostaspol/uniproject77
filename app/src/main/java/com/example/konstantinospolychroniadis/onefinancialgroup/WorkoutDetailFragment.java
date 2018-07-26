@@ -8,23 +8,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class WorkoutDetailFragment extends Fragment {
-
     private long workoutId;
-
-    public WorkoutDetailFragment() {
-        // Required empty public constructor
-    }
-
+    // Required empty public constructor
+    public WorkoutDetailFragment() { }
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         if (savedInstanceState != null) {
-            workoutId = savedInstanceState.getLong("workoutId");
-        }
-        return inflater.inflate(R.layout.fragment_workout_detail, container, false);
-    }
-
+            workoutId = savedInstanceState.getLong("workoutId"); }
+        return inflater.inflate(R.layout.fragment_workout_detail, container, false); }
     @Override
     public void onStart() {
         super.onStart();
@@ -40,17 +32,9 @@ public class WorkoutDetailFragment extends Fragment {
             TextView holder = (TextView) view.findViewById(R.id.textHolder);
             holder.setText(workout.getHolder());
             TextView help = (TextView) view.findViewById(R.id.textHelp);
-            help.setText(workout.getHelp());
-        }
-    }
-
-    public void setWorkout(long id) {
-        this.workoutId = id;
-    }
-
+            help.setText(workout.getHelp()); } }
+    public void setWorkout(long id) { this.workoutId = id; }
     @Override
     public void onSaveInstanceState(Bundle savedInstateState) {
-        savedInstateState.putLong("workoutId", workoutId);
-    }
+        savedInstateState.putLong("workoutId", workoutId); }
 }
-

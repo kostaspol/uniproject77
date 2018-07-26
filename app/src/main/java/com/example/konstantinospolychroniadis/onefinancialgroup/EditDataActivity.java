@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class EditDataActivity extends AppCompatActivity {
-
     private static final String TAG = "EditDataActivity";
     private Button btnSave,btnDelete;
     private EditText editable_item;
@@ -42,29 +41,18 @@ public class EditDataActivity extends AppCompatActivity {
                 String item = editable_item.getText().toString();
                 if(!item.equals("")){
                     mDatabaseHelper.updateName(item,selectedID,selectedName);
-                }else{
-                    toastMessage("You must enter a name"); }
-            }
-        });
+                }else{ toastMessage("You must enter a name"); } } });
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mDatabaseHelper.deleteName(selectedID,selectedName);
                 editable_item.setText("");
-                toastMessage("removed from database");
-            }
-        });
-    }
-    /**
-     * customizable toast
-     * @param message
-     */
+                toastMessage("removed from database"); } }); }
     private void toastMessage(String message){
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show(); }
     @Override
     public boolean onOptionsItemSelected (MenuItem item) {
         int id = item.getItemId();
-        if (id == android.R.id.home){
-            this.finish(); }
+        if (id == android.R.id.home){ this.finish(); }
         return super.onOptionsItemSelected(item); }
 }

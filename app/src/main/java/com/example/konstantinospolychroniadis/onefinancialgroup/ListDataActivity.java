@@ -16,7 +16,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class ListDataActivity extends AppCompatActivity {
-
     private static final String TAG = "ListDataActivity";
     DatabaseHelper mDatabaseHelper;
     private ListView mListView;
@@ -49,30 +48,19 @@ public class ListDataActivity extends AppCompatActivity {
                 Log.d(TAG, "onItemClick: You Clicked on " + name);
                 Cursor data = mDatabaseHelper.getItemID(name); //get the id associated with that name
                 int itemID = -1;
-                while(data.moveToNext()){
-                    itemID = data.getInt(0); }
+                while(data.moveToNext()){ itemID = data.getInt(0); }
                 if(itemID > -1){
                     Log.d(TAG, "onItemClick: The ID is: " + itemID);
                     Intent editScreenIntent = new Intent(ListDataActivity.this, EditDataActivity.class);
                     editScreenIntent.putExtra("id",itemID);
                     editScreenIntent.putExtra("name",name);
                     startActivity(editScreenIntent); }
-                else{
-                    toastMessage("No ID associated with that name"); }
-            }
-        });
-    }
-    /**
-     * customizable toast
-     * @param message
-     */
+                else{ toastMessage("No ID associated with that name"); } } }); }
     private void toastMessage(String message){
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show(); }
     @Override
     public boolean onOptionsItemSelected (MenuItem item) {
         int id = item.getItemId();
-        if (id == android.R.id.home){
-            this.finish();
-        }
+        if (id == android.R.id.home){ this.finish(); }
         return super.onOptionsItemSelected(item); }
 }
